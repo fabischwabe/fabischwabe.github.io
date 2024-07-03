@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>August Übersicht</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .calendar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .day {
+            width: 150px;
+            height: 200px;
+            margin: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .day:hover {
+            transform: scale(1.05);
+        }
+
+        .day-number {
+            background-color: #007BFF;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            text-align: center;
+        }
+
+        .day-content {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .day-image {
+            max-width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .day-text {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>August Übersicht</h1>
+    <div class="calendar">
+        <!-- Hier werden die Kacheln für die einzelnen Tage des Monats August hinzugefügt -->
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const daysInAugust = 31;
+            const calendarDiv = document.querySelector('.calendar');
+
+            for (let day = 1; day <= daysInAugust; day++) {
+                const dayDiv = document.createElement('div');
+                dayDiv.classList.add('day');
+                dayDiv.innerHTML = `
+                    <div class="day-number">${day}</div>
+                    <div class="day-content">
+                        <img src="images/day${day}.jpg" alt="Bild für Tag ${day}" class="day-image">
+                        <p class="day-text">Kurzer Text für Tag ${day}</p>
+                    </div>
+                `;
+                dayDiv.onclick = () => {
+    
