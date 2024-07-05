@@ -15,10 +15,30 @@
         }
         .header {
             background-image: url('header-fomo.JPG');
-            background-size: cover;
-            background-position: center;
-            height: 300px;
+            background-size: 100% auto;
+            background-position: center top;
+            height: 300px; /* Höhe des Header-Bereichs, anpassbar */
             text-align: center;
+            position: relative;
+            overflow: hidden; /* Verhindert Überlappung des Inhalts */
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dunkler Überlagerungseffekt */
+        }
+        .header-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            z-index: 1;
+            width: 100%;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Textschatten für bessere Lesbarkeit */
         }
         .container {
             max-width: 800px;
@@ -53,7 +73,10 @@
 </head>
 <body>
     <div class="header">
-        <div class="overlay"></div> <!-- Overlay zur Verbesserung des Textkontrasts -->
+        <div class="overlay"></div>
+        <div class="header-content">
+            <h1>Eventos en agosto de 2024</h1>
+        </div>
     </div>
     <div class="container">
         <ul>
