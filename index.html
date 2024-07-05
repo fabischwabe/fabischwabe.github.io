@@ -16,13 +16,13 @@
         .header {
             position: relative;
             text-align: center;
-            height: 300px; /* Höhe des Header-Bereichs, anpassbar */
             overflow: hidden; /* Verhindert Überlappung des Inhalts */
         }
         .header img {
             width: 100%;
             height: auto;
-            object-fit: cover;
+            max-width: 100%; /* Bild passt sich der Container-Breite an */
+            vertical-align: middle; /* Zentriert das Bild vertikal */
         }
         .header-content {
             position: absolute;
