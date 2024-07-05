@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #f8f1e5; /* Cremefarben für eine warme Atmosphäre */
     flex-direction: column;
 }
 
@@ -16,23 +16,23 @@ header {
 }
 
 h1 {
-    color: #333;
+    color: #6d2e46; /* Dunkles Rosa für Überschrift */
     margin: 10px;
 }
 
 main {
-    width: 90vw; /* Anpassung der Breite des Hauptbereichs */
+    width: 90vw; /* Breite des Hauptbereichs auf 90% des Viewports */
     max-width: 1200px; /* Maximal zulässige Breite für den Hauptbereich */
     display: flex;
     justify-content: center;
 }
 
 .calendar {
-    background: white;
+    background: #fdf6ea; /* Hellbeige für den Kalenderhintergrund */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 100%; /* Der Kalender nimmt die gesamte verfügbare Breite des main-Bereichs ein */
+    width: 100%; /* Kalender nimmt die gesamte verfügbare Breite des main-Bereichs ein */
     max-width: 900px; /* Maximal zulässige Breite für den Kalender */
     height: calc(90vh - 100px); /* Höhe des Kalenders, abzüglich des Headers */
     display: flex;
@@ -43,18 +43,18 @@ main {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-gap: 1px;
-    background-color: #ddd;
+    background-color: #f8f1e5; /* Cremefarben für den Kopf- und Körperbereich */
 }
 
 .calendar-header div, .calendar-body .calendar-cell {
-    background-color: white;
+    background-color: #fdf6ea; /* Hellbeige für Zellenhintergrund */
     text-align: center;
-    border: 1px solid #ddd;
+    border: 1px solid #f8f1e5; /* Randfarbe etwas heller als Hintergrund */
     box-sizing: border-box;
 }
 
 .calendar-header div {
-    background-color: #f9f9f9;
+    background-color: #f0c0c0; /* Rosa für den Kopfbereich */
     font-weight: bold;
     padding: 10px 0;
 }
@@ -89,13 +89,13 @@ main {
 }
 
 .calendar-cell .front {
-    background-color: white;
+    background-color: #f0c0c0; /* Rosa für Vorderseite */
 }
 
 .calendar-cell .back {
-    background-color: #f9f9f9;
+    background-color: #fdf6ea; /* Hellbeige für Rückseite */
     transform: rotateY(180deg);
-    color: #333;
+    color: #6d2e46; /* Dunkles Rosa für Text auf der Rückseite */
 }
 
 @media (max-width: 600px) {
