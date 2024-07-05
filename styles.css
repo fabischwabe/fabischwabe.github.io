@@ -69,8 +69,8 @@ body {
     transform: rotateY(180deg);
 }
 
-.days li.flip::before {
-    content: '';
+.days li::before {
+    content: attr(data-day);
     position: absolute;
     top: 0;
     left: 0;
@@ -81,10 +81,13 @@ body {
     border-radius: 4px;
     backface-visibility: hidden;
     transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.days li.flip .event-desc {
-    display: block;
+.days li .event-desc {
+    display: none;
     font-size: 14px;
     color: #333333;
 }
