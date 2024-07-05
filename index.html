@@ -1,1 +1,58 @@
-Hallo
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalenderansicht August</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+    <header>
+        <h1>Kalenderansicht - August</h1>
+    </header>
+    <main>
+        <div class="calendar">
+            <div class="calendar-header">
+                <div>So</div>
+                <div>Mo</div>
+                <div>Di</div>
+                <div>Mi</div>
+                <div>Do</div>
+                <div>Fr</div>
+                <div>Sa</div>
+            </div>
+            <div class="calendar-body">
+                <!-- Leer für die Tage vor dem 1. August -->
+                <div class="calendar-cell empty"></div>
+                <div class="calendar-cell empty"></div>
+                <div class="calendar-cell empty"></div>
+                <div class="calendar-cell empty"></div>
+                <div class="calendar-cell empty"></div>
+                <div class="calendar-cell empty"></div>
+
+                <!-- Kalenderzellen für den Monat August -->
+                <div class="calendar-cell" onclick="flip(this)">
+                    <div class="front">1</div>
+                    <div class="back">Ereignis 1</div>
+                </div>
+                <div class="calendar-cell" onclick="flip(this)">
+                    <div class="front">2</div>
+                    <div class="back">Ereignis 2</div>
+                </div>
+                <!-- Fügen Sie weitere Zellen für jeden Tag des Monats August hinzu -->
+                <!-- Beispiel für den 3. bis 31. August -->
+                <!-- ... -->
+                <div class="calendar-cell" onclick="flip(this)">
+                    <div class="front">31</div>
+                    <div class="back">Ereignis 31</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        function flip(element) {
+            element.classList.toggle('flipped');
+        }
+    </script>
+</body>
+</html>
