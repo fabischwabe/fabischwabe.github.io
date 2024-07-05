@@ -4,6 +4,22 @@ body {
     margin: 0;
     padding: 0;
 }
+ h1 {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* Stil für das Bild innerhalb des H1-Elements */
+        h1 img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
 
 .calendar {
     max-width: 800px;
