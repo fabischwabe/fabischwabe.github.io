@@ -55,39 +55,44 @@ body {
     border: 1px solid #e0e0e0;
     border-radius: 4px;
     padding: 5px;
-    cursor: pointer;
-    transition: transform 0.5s;
-    perspective: 1000px; /* für 3D-Effekt erforderlich */
-
-    /* Flexbox für die 3D-Drehung */
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.days li.flip {
-    transform: rotateY(180deg);
+.days li.event {
+    background-color: #ffd700; /* Gelb für Ereignisse */
 }
 
-.days li::before {
-    content: attr(data-day);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
-    backface-visibility: hidden;
-    transform: rotateY(180deg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.days li .event-desc {
-    display: none;
-    font-size: 14px;
+.event-desc {
+    display: block;
+    font-size: 12px;
     color: #333333;
+    margin-top: 5px;
+}
+
+/* Anpassungen für spanisches Farbschema */
+/* Annahme: Farbpalette passend zu einer spanischen Frau (könnte je nach Interpretation variieren) */
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.calendar {
+    background-color: #fef4de; /* Creme-Gelb */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.calendar h1 {
+    color: #d32f2f; /* Dunkles Rot */
+}
+
+.weekdays {
+    background-color: #f6ddcc; /* Helles Orange */
+}
+
+.days li {
+    background-color: #f9e6cf; /* Hellbeige */
+    border-color: #e5c6a0; /* Sandfarben */
+}
+
+.days li.event {
+    background-color: #ffd54f; /* Hellgelb für Ereignisse */
 }
