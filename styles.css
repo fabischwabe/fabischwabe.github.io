@@ -66,16 +66,18 @@ body {
 
 .days li {
     position: relative;
-    min-height: 80px;
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
     border-radius: 4px;
-    padding: 5px;
+    padding: 10px;
+    min-height: 80px; /* Mindesthöhe für jedes Element */
+    box-sizing: border-box; /* Sicherstellen, dass Padding in der Höhenberechnung enthalten ist */
+    overflow: hidden; /* Verhindern, dass Text über die Grenzen hinausragt */
 }
 
-/*.days li.event {
-    background-color: #ffd700; /* Gelb für Ereignisse */
-}*/
+.days li.event {
+    background-color: #ffd700;
+}
 
 .event-desc {
     display: block;
