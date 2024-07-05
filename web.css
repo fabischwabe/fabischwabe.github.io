@@ -38,7 +38,6 @@ h1 {
 
 .calendar-header div, .calendar-body .calendar-cell {
     background-color: white;
-    padding: 10px;
     text-align: center;
     border: 1px solid #ddd;
     box-sizing: border-box;
@@ -47,6 +46,7 @@ h1 {
 .calendar-header div {
     background-color: #f9f9f9;
     font-weight: bold;
+    padding: 10px 0;
 }
 
 .calendar-body .calendar-cell {
@@ -80,6 +80,7 @@ h1 {
     align-items: center;
     font-size: 1.5em;
     box-sizing: border-box;
+    padding: 10px;
 }
 
 .calendar-cell .front {
@@ -93,7 +94,7 @@ h1 {
 }
 
 @media (max-width: 600px) {
-    .calendar-header div, .calendar-body .calendar-cell {
+    .calendar-header div, .calendar-body .calendar-cell .front, .calendar-body .calendar-cell .back {
         font-size: 0.8em;
     }
 }
